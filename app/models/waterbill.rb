@@ -1,0 +1,2 @@
+class Waterbill < ApplicationRecord
+end

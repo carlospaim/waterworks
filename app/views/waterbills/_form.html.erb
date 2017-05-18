@@ -1,0 +1,37 @@
+<%= form_for(waterbill) do |f| %>
+  <% if waterbill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(waterbill.errors.count, "error") %> prohibited this waterbill from being saved:</h2>
+
+      <ul>
+      <% waterbill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :comsumer %>
+    <%= f.text_field :comsumer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :month %>
+    <%= f.number_field :month %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year %>
+    <%= f.number_field :year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :consumption %>
+    <%= f.text_field :consumption %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
